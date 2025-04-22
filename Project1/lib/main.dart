@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project1/login_page.dart';
+import 'package:project1/pages/login_page.dart';
 import 'package:project1/styles/app_colors.dart';
 
 void main() {
@@ -22,4 +22,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//https://youtu.be/OO_-MbnXQzY?t=6172
+//https://youtu.be/OO_-MbnXQzY?t=7941
