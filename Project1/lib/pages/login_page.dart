@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project1/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -50,7 +51,9 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed('/home');
+                    },
                     child: Text('Login'),
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.black,
@@ -93,7 +96,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Image.asset('assets/fb.jpg', width: 20, height: 20),
                       SizedBox(width: 10),
-                      Text('Login with fb'),
+                      Text('Login with facebook'),
                     ],
                   ),
                 ),
