@@ -52,7 +52,7 @@ class LoginPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/main');
                     },
                     child: Text('Login'),
                     style: ElevatedButton.styleFrom(
@@ -122,6 +122,5 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
 
 // https://youtu.be/OO_-MbnXQzY?t=9000

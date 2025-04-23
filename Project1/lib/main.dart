@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project1/pages/home_page.dart';
 import 'package:project1/pages/login_page.dart';
+import 'package:project1/pages/main_page.dart';
 import 'package:project1/styles/app_colors.dart';
 
 void main() {
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.background,
       ),
       initialRoute: '/',
-      routes: {'/': (context) => LoginPage(), '/home': (context) => HomePage()},
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/main': (context) => MainPage(),
+      },
     );
   }
 }
