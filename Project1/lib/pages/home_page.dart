@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project1/components/post_item.dart';
 import 'package:project1/styles/app_colors.dart';
+import 'package:project1/styles/app_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,22 +19,14 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _userItem() {
-    return Row(
-      children: [
-        Image.asset('assets/temp/profile.jpg', width: 40, height: 40),
-        SizedBox(width: 16),
-        Text('SIMPLE NAME', style: TextStyle(color: Colors.white)),
-      ],
-    );
-  }
-
   List<Widget> mockUserFromServer() {
     List<Widget> users = [];
 
     for (var i = 0; i < 200; ++i) {
-      users.add(_userItem());
+      users.add(PostItem());
     }
     return users;
   }
 }
+
+//https://youtu.be/OO_-MbnXQzY?t=11833
