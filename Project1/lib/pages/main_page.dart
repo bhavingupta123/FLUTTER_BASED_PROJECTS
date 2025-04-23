@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/pages/home_page.dart';
+import 'package:project1/pages/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -15,7 +16,7 @@ class _MainPageState extends State<MainPage> {
     Center(child: Text('Fav', style: TextStyle(color: Colors.white))),
     Center(child: Text('Posts', style: TextStyle(color: Colors.white))),
     Center(child: Text('Messages', style: TextStyle(color: Colors.white))),
-    Center(child: Text('Profile', style: TextStyle(color: Colors.white))),
+    ProfilePage(),
   ];
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/components/post_item.dart';
+import 'package:project1/components/toolbar.dart';
 import 'package:project1/styles/app_colors.dart';
 import 'package:project1/styles/app_text.dart';
 
@@ -11,11 +12,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     mockUserFromServer();
     return Scaffold(
-      appBar: AppBar(
-        title: Text('5 minutes flutter', style: TextStyle(color: Colors.white)),
-        actions: [Icon(Icons.location_on_outlined, color: Colors.white)],
-        centerTitle: false,
-        backgroundColor: AppColors.background,
+      appBar: Toolbar(
+        title: '5 minutes Flutter',
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.home))],
       ),
       body: ListView.separated(
         itemBuilder: (context, index) {
