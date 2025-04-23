@@ -13,7 +13,26 @@ class HomePage extends StatelessWidget {
         centerTitle: false,
         backgroundColor: AppColors.background,
       ),
-      body: Column(children: []),
+      body: ListView(children: mockUserFromServer()),
     );
+  }
+
+  Widget _userItem() {
+    return Row(
+      children: [
+        Image.asset('assets/temp/profile.jpg', width: 40, height: 40),
+        SizedBox(width: 16),
+        Text('SIMPLE NAME', style: TextStyle(color: Colors.white)),
+      ],
+    );
+  }
+
+  List<Widget> mockUserFromServer() {
+    List<Widget> users = [];
+
+    for (var i = 0; i < 200; ++i) {
+      users.add(_userItem());
+    }
+    return users;
   }
 }
