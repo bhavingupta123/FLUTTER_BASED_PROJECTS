@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/components/toolbar.dart';
-import 'package:project1/styles/app_colors.dart';
+import 'package:project1/components/user_avatar.dart';
+import 'package:project1/config/app_routes.dart';
 import 'package:project1/styles/app_text.dart';
 
 enum ProfileMenu { edit, logout }
@@ -18,7 +19,7 @@ class ProfilePage extends StatelessWidget {
             onSelected: (value) {
               switch (value) {
                 case ProfileMenu.edit:
-                  Navigator.of(context).pushNamed('/edit_profile');
+                  Navigator.of(context).pushNamed(AppRoutes.editProfile);
                   break;
                 case ProfileMenu.logout:
                   break;
@@ -37,10 +38,7 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(16)),
-            child: Image.asset('assets/temp/profile.jpg', height: 90, width: 90),
-          ),
+          UserAvatar(size: 90),
           SizedBox(height: 24),
           Text('MS DHONI', style: AppText.header2),
           SizedBox(height: 12),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/config/app_strings.dart';
 import 'package:project1/pages/home_page.dart';
 import 'package:project1/pages/profile_page.dart';
 
@@ -13,9 +14,9 @@ class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   final pages = [
     HomePage(),
-    Center(child: Text('Fav', style: TextStyle(color: Colors.white))),
-    Center(child: Text('Posts', style: TextStyle(color: Colors.white))),
-    Center(child: Text('Messages', style: TextStyle(color: Colors.white))),
+    Center(child: Text(AppStrings.favorites, style: TextStyle(color: Colors.white))),
+    Center(child: Text(AppStrings.posts, style: TextStyle(color: Colors.white))),
+    Center(child: Text(AppStrings.messages, style: TextStyle(color: Colors.white))),
     ProfilePage(),
   ];
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project1/config/app_routes.dart';
+import 'package:project1/config/app_strings.dart';
 import 'package:project1/pages/home_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,15 +19,15 @@ class LoginPage extends StatelessWidget {
               children: [
                 Spacer(),
                 Text(
-                  'Hello, Welcome back !',
+                  AppStrings.helloWelcome,
                   style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 16),
-                Text('Login to Continue', style: TextStyle(color: Colors.white)),
+                Text(AppStrings.loginToContinue, style: TextStyle(color: Colors.white)),
                 Spacer(),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'username',
+                    hintText: AppStrings.username,
                     border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.5),
@@ -34,7 +36,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 16),
                 TextField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: AppStrings.password,
                     border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.5),
@@ -45,16 +47,16 @@ class LoginPage extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(foregroundColor: Colors.white),
-                    child: Text('Forgot password'),
+                    child: Text(AppStrings.forgotPassword),
                   ),
                 ),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/main');
+                      Navigator.of(context).pushReplacementNamed(AppRoutes.main);
                     },
-                    child: Text('Login'),
+                    child: Text(AppStrings.login),
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.black,
                       backgroundColor: Colors.yellow,
@@ -62,7 +64,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text('Sign in with:', style: TextStyle(color: Colors.white)),
+                Text(AppStrings.orSignInWith, style: TextStyle(color: Colors.white)),
                 SizedBox(height: 15),
                 ElevatedButton(
                   onPressed: () {},
@@ -78,7 +80,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Image.asset('assets/google.png', width: 20, height: 20),
                       SizedBox(width: 10),
-                      Text('Login with google'),
+                      Text(AppStrings.loginWithGoogle),
                     ],
                   ),
                 ),
@@ -96,7 +98,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Image.asset('assets/fb.jpg', width: 20, height: 20),
                       SizedBox(width: 10),
-                      Text('Login with facebook'),
+                      Text(AppStrings.loginWithFacebook),
                     ],
                   ),
                 ),
@@ -106,7 +108,7 @@ class LoginPage extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        'Sign Up',
+                        AppStrings.signup,
                         style: TextStyle(decoration: TextDecoration.underline),
                       ),
                       style: TextButton.styleFrom(foregroundColor: Colors.amber),
